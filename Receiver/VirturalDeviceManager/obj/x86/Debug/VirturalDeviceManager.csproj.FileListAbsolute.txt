@@ -1,0 +1,9 @@
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\bin\Debug\VirturalDeviceManager.exe
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\bin\Debug\VirturalDeviceManager.pdb
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\VirturalDeviceManager.Form1.resources
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\VirturalDeviceManager.Properties.Resources.resources
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\VirturalDeviceManager.exe
+F:\workspacecsharp\RecentProject\BiShe\Receiver\VirturalDeviceManager\obj\x86\Debug\VirturalDeviceManager.pdb

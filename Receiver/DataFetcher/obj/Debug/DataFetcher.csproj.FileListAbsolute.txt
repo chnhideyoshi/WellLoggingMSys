@@ -1,0 +1,5 @@
+F:\workspacecsharp\RecentProject\BiShe\Receiver\DataFetcher\bin\Debug\DataFetcher.dll
+F:\workspacecsharp\RecentProject\BiShe\Receiver\DataFetcher\bin\Debug\DataFetcher.pdb
+F:\workspacecsharp\RecentProject\BiShe\Receiver\DataFetcher\obj\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\Receiver\DataFetcher\obj\Debug\DataFetcher.dll
+F:\workspacecsharp\RecentProject\BiShe\Receiver\DataFetcher\obj\Debug\DataFetcher.pdb

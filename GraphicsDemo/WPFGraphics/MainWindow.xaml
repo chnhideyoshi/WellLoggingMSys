@@ -1,0 +1,16 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WPFGraphics" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WPFGraphics.MainWindow"
+        Title="MainWindow" Height="800" Width="1220">
+	<Grid>
+		<Image Margin="8,-24,-8,-8" Source="Image/BR7R4BA_{Z1L6KMEN[81$R6.jpg" Stretch="Fill"/>
+    	<Grid x:Name="LayoutRoot" Margin="142.375,152,8,114">
+    		<ScrollViewer>
+    			<local:Graph Width="880" Height="880"></local:Graph> 		
+			</ScrollViewer>
+    	</Grid>
+    	<Slider Margin="184,0,8,8" VerticalAlignment="Bottom" Height="32"/>
+    	
+	</Grid>
+</Window>

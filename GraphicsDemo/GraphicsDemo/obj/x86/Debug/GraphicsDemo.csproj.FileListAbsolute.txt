@@ -1,0 +1,9 @@
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\bin\Debug\GraphicsDemo.exe
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\bin\Debug\GraphicsDemo.pdb
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\GraphicsDemo.Form1.resources
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\GraphicsDemo.Properties.Resources.resources
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\GraphicsDemo.exe
+F:\workspacecsharp\RecentProject\BiShe\GraphicsDemo\GraphicsDemo\obj\x86\Debug\GraphicsDemo.pdb

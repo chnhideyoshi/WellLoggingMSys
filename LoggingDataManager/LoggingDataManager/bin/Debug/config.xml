@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <HostIp>127.0.0.1</HostIp>
+  <HostPort>80</HostPort>
+  <DefaultDeviceInfo>
+    <VirtualDevice name="Temporature" id="c6efa725-2e35-4b5b-9e98-71fcd3dd06b1" samplingrate="10" />
+  </DefaultDeviceInfo>
+</Settings>

@@ -1,0 +1,5 @@
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\NetDataFetcher\bin\Debug\NetDataFetcher.dll
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\NetDataFetcher\bin\Debug\NetDataFetcher.pdb
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\NetDataFetcher\obj\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\NetDataFetcher\obj\Debug\NetDataFetcher.dll
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\NetDataFetcher\obj\Debug\NetDataFetcher.pdb

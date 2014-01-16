@@ -1,0 +1,5 @@
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\bin\Debug\Receiver.exe
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\bin\Debug\Receiver.pdb
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\obj\x86\Debug\Receiver.exe
+F:\workspacecsharp\RecentProject\BiShe\Receiver\Receiver\obj\x86\Debug\Receiver.pdb

@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60BC35EF-4EEC-4C71-A3A5-88D2624C233E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoggingDataManager</RootNamespace>
+    <AssemblyName>LoggingDataManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30701.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LoggingSysIco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.67.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\SQLite.NET4\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppHelper.cs" />
+    <Compile Include="CurveSettings\CurveSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CurveSettings\CurveSetting.Designer.cs">
+      <DependentUpon>CurveSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\DataFetcher.cs" />
+    <Compile Include="Data\Depth.cs" />
+    <Compile Include="GlobalTables.cs" />
+    <Compile Include="Data\NetDataFetcher.cs" />
+    <Compile Include="DeviceManagement\NewDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceManagement\NewDeviceForm.Designer.cs">
+      <DependentUpon>NewDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="LeftPanel\DevicePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeftPanel\DevicePanel.Designer.cs">
+      <DependentUpon>DevicePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeftPanel\ProjectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeftPanel\ProjectPanel.Designer.cs">
+      <DependentUpon>ProjectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CurveDataManager.cs" />
+    <Compile Include="Project\NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublicControls\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublicControls\SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublicControls\DeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublicControls\DeleteForm.Designer.cs">
+      <DependentUpon>DeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurveSettings\NewCurveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurveSettings\NewCurveForm.Designer.cs">
+      <DependentUpon>NewCurveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseClass.cs" />
+    <Compile Include="Model\Models.cs" />
+    <Compile Include="Model\DataHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RTL\DataSourceConfigConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTL\DataSourceConfigConfirmForm.Designer.cs">
+      <DependentUpon>DataSourceConfigConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\DataSourceStartConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\DataSourceStartConfig.Designer.cs">
+      <DependentUpon>DataSourceStartConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\DataSourceStartConfigConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTL\DataSourceStartConfigConfirmForm.Designer.cs">
+      <DependentUpon>DataSourceStartConfigConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\DataSourceConfigPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\DataSourceConfigPanel.Designer.cs">
+      <DependentUpon>DataSourceConfigPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\DataSourceStatePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\DataSourceStatePanel.Designer.cs">
+      <DependentUpon>DataSourceStatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\DepthStatePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\DepthStatePanel.Designer.cs">
+      <DependentUpon>DepthStatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\GraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\GraphControl.Designer.cs">
+      <DependentUpon>GraphControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\GraphEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\GraphEditor.Designer.cs">
+      <DependentUpon>GraphEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\ListSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTL\ListSelectForm.Designer.cs">
+      <DependentUpon>ListSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\RTLPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTL\RTLPanel.Designer.cs">
+      <DependentUpon>RTLPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTL\tools.cs" />
+    <Compile Include="RTL\ViewSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTL\ViewSettingForm.Designer.cs">
+      <DependentUpon>ViewSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\ChildWindow\MoveWindow.xaml.cs">
+      <DependentUpon>MoveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\CurveEditor.xaml.cs">
+      <DependentUpon>CurveEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\CurveManager.cs" />
+    <Compile Include="WPFGraph\DeepPanel.xaml.cs">
+      <DependentUpon>DeepPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\Graph.xaml.cs">
+      <DependentUpon>Graph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\GridMap.xaml.cs">
+      <DependentUpon>GridMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\IGraph.cs" />
+    <Compile Include="WPFGraph\ParaTable.xaml.cs">
+      <DependentUpon>ParaTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGraph\resizingadorner.cs" />
+    <EmbeddedResource Include="CurveSettings\CurveSetting.resx">
+      <DependentUpon>CurveSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceManagement\NewDeviceForm.resx">
+      <DependentUpon>NewDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeftPanel\DevicePanel.resx">
+      <DependentUpon>DevicePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeftPanel\ProjectPanel.resx">
+      <DependentUpon>ProjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PublicControls\SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PublicControls\DeleteForm.resx">
+      <DependentUpon>DeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurveSettings\NewCurveForm.resx">
+      <DependentUpon>NewCurveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RTL\DataSourceConfigConfirmForm.resx">
+      <DependentUpon>DataSourceConfigConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\DataSourceStartConfig.resx">
+      <DependentUpon>DataSourceStartConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\DataSourceStartConfigConfirmForm.resx">
+      <DependentUpon>DataSourceStartConfigConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\DataSourceConfigPanel.resx">
+      <DependentUpon>DataSourceConfigPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\DataSourceStatePanel.resx">
+      <DependentUpon>DataSourceStatePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\DepthStatePanel.resx">
+      <DependentUpon>DepthStatePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\GraphControl.resx">
+      <DependentUpon>GraphControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\GraphEditor.resx">
+      <DependentUpon>GraphEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\ListSelectForm.resx">
+      <DependentUpon>ListSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\RTLPanel.resx">
+      <DependentUpon>RTLPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTL\ViewSettingForm.resx">
+      <DependentUpon>ViewSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PublicProtocal\PublicProtocal.csproj">
+      <Project>{2150EA9D-9DC4-436E-8C64-BE58E9B839B8}</Project>
+      <Name>PublicProtocal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\CurveSettings\20060823133929334.png" />
+    <Content Include="Files\ij.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\IJ_Props.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Image\CurveSettings\curvesetting_curvesetingItem.png" />
+    <Content Include="Image\CurveSettings\pie_chart_48.png" />
+    <Content Include="Image\LeftPanel\20060823131633631.png" />
+    <Content Include="Image\LeftPanel\20060823131634685.png" />
+    <Content Include="Image\LeftPanel\20060823131635417.png" />
+    <Content Include="Image\LeftPanel\20060823133947887.png" />
+    <Content Include="Image\LeftPanel\Tools.png" />
+    <Content Include="Image\MainForm\LoggingSysIco.ico" />
+    <Content Include="Image\MainForm\LoggingSysIco.png" />
+    <Content Include="Image\Menu\1\20060823133926802.png" />
+    <Content Include="Image\Menu\1\20060823133935850.png" />
+    <Content Include="Image\Menu\1\20060823133945743.png" />
+    <Content Include="Image\Menu\1\icon_11.png" />
+    <Content Include="Image\Menu\1\icon_13.png" />
+    <Content Include="Image\Menu\1\icon_21.png" />
+    <Content Include="Image\Menu\1\icon_51.png" />
+    <Content Include="Image\Menu\1\icon_59.png" />
+    <Content Include="Image\Menu\2\icon_25.png" />
+    <Content Include="Image\Menu\3\20060823133932198.png" />
+    <Content Include="Image\Menu\3\icon-06.png" />
+    <Content Include="Image\Menu\3\icon_27.png" />
+    <Content Include="Image\Menu\4\20060823133927594.png" />
+    <Content Include="Image\Menu\4\20060823133947887.png" />
+    <Content Include="Image\Menu\5\20060823131638918.png" />
+    <Content Include="Image\Menu\5\20060823133929334.png" />
+    <Content Include="Image\Menu\5\20060823133931969.png" />
+    <Content Include="Image\Menu\5\20060823133945487.png" />
+    <Content Include="Image\Menu\6\20060823133933342.png" />
+    <Content Include="Image\Menu\6\20060823133933885.png" />
+    <Content Include="Image\Menu\7\20060823131636485.png" />
+    <Content Include="Image\Menu\7\20060823131636708.png" />
+    <Content Include="Image\Menu\7\20060823131637976.png" />
+    <Content Include="Image\RTL\20060823133942167.png" />
+    <Content Include="Image\RTL\20060823133945487.png" />
+    <Content Include="Image\RTL\20060823133945743.png" />
+    <Content Include="Image\RTL\20060823133946365.png" />
+    <Content Include="Image\RTL\add_48.png" />
+    <Content Include="Image\RTL\icon_27.png" />
+    <Content Include="Image\RTL\icon_28.png" />
+    <Content Include="Image\RTL\icon_29.png" />
+    <Content Include="Image\RTL\Refresh.png" />
+    <Content Include="Image\solution.png" />
+    <Content Include="LoggingSysIco.ico" />
+    <None Include="Resources\LeftPanel_ProjectPanel_Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WPFGraph\ChildWindow\MoveWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPFGraph\CurveEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFGraph\DeepPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPFGraph\Graph.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPFGraph\GridMap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPFGraph\ParaTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

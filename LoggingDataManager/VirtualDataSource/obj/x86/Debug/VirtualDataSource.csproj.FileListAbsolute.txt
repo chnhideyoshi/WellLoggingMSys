@@ -1,0 +1,12 @@
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\bin\Debug\VirtualDataSource.exe
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\bin\Debug\VirtualDataSource.pdb
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\obj\x86\Debug\VirtualDataSource.exe
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\obj\x86\Debug\VirtualDataSource.pdb
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\bin\Debug\VirtualDataSource.exe.config
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\bin\Debug\PublicProtocal.dll
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\VirtualDataSource\bin\Debug\PublicProtocal.pdb
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\LoggingDataManager\bin\Debug\VirtualDataSource.exe.config
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\LoggingDataManager\bin\Debug\VirtualDataSource.exe
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\LoggingDataManager\bin\Debug\VirtualDataSource.pdb
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\LoggingDataManager\bin\Debug\config.xml

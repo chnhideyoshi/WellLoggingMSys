@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPFGraphics.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="446" Width="600">
+    <Grid>
+    	<Canvas x:Name="CA_Main" Margin="32,40,72,64">
+    		<Canvas.Background>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="#FF999999" Offset="0"/>
+    				<GradientStop Color="White" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Canvas.Background>
+			<Line x:Name="Line1" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line1}" X2="{Binding X1, ElementName=Line1}" Stroke="Red" X1="0"/>
+			<Line x:Name="Line2" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line2}" X1="48" X2="{Binding X1, ElementName=Line2}" Stroke="Red"></Line>
+			<Line x:Name="Line3" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line3}" X1="96" X2="{Binding X1, ElementName=Line3}" Stroke="Red"></Line>
+			<Line x:Name="Line4" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line4}" X1="120" X2="{Binding X1, ElementName=Line4}" Stroke="Red"></Line>
+			<Line x:Name="Line5" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line5}" X1="160" X2="{Binding X1, ElementName=Line5}" Stroke="Red"></Line>
+			<Line x:Name="Line6" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line6}" X1="200" X2="{Binding X1, ElementName=Line6}" Stroke="Red"></Line>
+			<Line x:Name="Line7" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line7}" X1="240" X2="{Binding X1, ElementName=Line7}" Stroke="Red"></Line>
+			<Line x:Name="Line8" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line8}" X1="280" X2="{Binding X1, ElementName=Line8}" Stroke="Red"></Line>
+			<Line x:Name="Line9" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line9}" X1="360" X2="{Binding X1, ElementName=Line9}" Stroke="Red"></Line>
+			<Line x:Name="Line10" Height="304" Width="480" Y2="{Binding ActualHeight, ElementName=Line10}" X1="400" X2="{Binding X1, ElementName=Line10}" Stroke="Red"></Line>
+			<Polyline x:Name="PL_LIne" Stroke="Black" Height="304" Width="480"></Polyline>
+    	</Canvas>
+    	<Button x:Name="BTN_sTART" Content="Button" HorizontalAlignment="Right" Margin="0,0,149,18.163" VerticalAlignment="Bottom" Width="75"/>
+    	<Slider x:Name="SL_mAIN" Margin="32,0,72,26" VerticalAlignment="Bottom"/>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,5 @@
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\PublicProtocal\bin\Debug\PublicProtocal.dll
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\PublicProtocal\bin\Debug\PublicProtocal.pdb
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\PublicProtocal\obj\Debug\ResolveAssemblyReference.cache
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\PublicProtocal\obj\Debug\PublicProtocal.dll
+F:\workspacecsharp\RecentProject\BiShe\LoggingDataManager\PublicProtocal\obj\Debug\PublicProtocal.pdb

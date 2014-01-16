@@ -1,0 +1,47 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:WPFGraphics"
+	mc:Ignorable="d"
+	x:Class="WPFGraphics.Graph"
+	x:Name="UserControl"
+	Width="880" d:DesignHeight="880">
+    <Border BorderThickness="3" BorderBrush="Black">
+		<Grid x:Name="LayoutRoot" Background="White" >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.5*"/>
+				<ColumnDefinition Width="80"/>
+				<ColumnDefinition Width="0.5*"/>
+				<ColumnDefinition Width="0.5*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" MinHeight="110"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<TextBlock Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="深度(m)" FontSize="21.333" HorizontalAlignment="Center" VerticalAlignment="Center" Width="36" TextAlignment="Center"/>
+			<StackPanel x:Name="STK_CurveGroupContainer1" Margin="0">
+				
+			</StackPanel>
+			<StackPanel x:Name="STK_CurveGroupContainer2" Margin="0" Grid.Column="2"/>
+			<StackPanel x:Name="STK_CurveGroupContainer3" Margin="0" Grid.Column="3"/>
+			<StackPanel x:Name="STK_GraphContainer1" Grid.Row="1" ClipToBounds="True">
+				<local:GridMap x:Name="UC_Gm1" Height="764"  />
+			</StackPanel>
+			<StackPanel x:Name="STK_GraphContainer2" Grid.Row="1" Grid.Column="2">
+				<local:GridMap x:Name="UC_Gm2" Height="764"  ClipToBounds="True"/>
+			</StackPanel>
+			<StackPanel x:Name="STK_GraphContainer3"  ClipToBounds="True" Grid.Row="1" Grid.Column="3">
+				<local:GridMap x:Name="UC_Gm3" Height="764"  />
+			</StackPanel>
+			<StackPanel Grid.Row="1" Grid.Column="1">
+				<local:DeepPanel x:Name="UC_Dp" Height="764" />
+			</StackPanel>
+			<Line x:Name="line" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="2" Fill="Black" X2="{Binding ActualWidth, ElementName=line}" Panel.ZIndex="-5"/>
+			<Line x:Name="line1" Grid.RowSpan="2" HorizontalAlignment="Right" StrokeThickness="2" Y2="{Binding ActualHeight, ElementName=line1}" Fill="Black" Stroke="Black"/>
+			<Line x:Name="line2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Left" StrokeThickness="2" Y2="{Binding ActualHeight, ElementName=line2}" Fill="Black" Stroke="Black"/>
+			<Line x:Name="line3" StrokeThickness="2" HorizontalAlignment="Right" Grid.Column="1" Grid.RowSpan="2" Y2="{Binding ActualHeight, ElementName=line3}" Fill="Black" Stroke="Black"/>
+		</Grid>
+	</Border>  
+</UserControl>

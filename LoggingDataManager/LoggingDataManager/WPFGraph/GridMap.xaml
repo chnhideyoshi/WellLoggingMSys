@@ -1,0 +1,22 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="LoggingDataManager.WPFGraph.GridMap"
+	x:Name="UserControl"
+	d:DesignWidth="264.66" d:DesignHeight="764">
+
+	<Grid x:Name="LayoutRoot">
+		<Canvas x:Name="CA_LineContainer">
+			
+		</Canvas>
+		<Canvas x:Name="CA_LineContainer2">
+			
+		</Canvas>
+		<Canvas x:Name="CA_PolylineContainer">
+			
+		</Canvas>
+	</Grid>
+</UserControl>

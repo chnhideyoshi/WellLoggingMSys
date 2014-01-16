@@ -1,0 +1,144 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LoggingDataManager.WPFGraph" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="LoggingDataManager.WPFGraph.CurveEditor" 
+             mc:Ignorable="d" 
+             d:DesignHeight="880" d:DesignWidth="718" Background="White">
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="0,8,0,0"/>
+            <Setter Property="VerticalAlignment" Value="center"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="58"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="1" BorderBrush="Black" CornerRadius="2" Background="{TemplateBinding Background}">
+                            <Grid Background="#00000000">
+                                <TextBlock x:Name="textBlock" Text="{TemplateBinding Tag}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="26,0,0,0"></TextBlock>
+                                <ContentPresenter RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-29,0,0,0"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#50000000"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="false">
+                                <Setter Property="Background" Value="#FFFFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="EllipseStyle1" TargetType="{x:Type Ellipse}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Height" Value="8"/>
+            <Setter Property="Fill" Value="Red"/>
+            <Setter Property="Stroke" Value="Black"/>
+        </Style>
+        <Style x:Key="EllipseStyle2" TargetType="{x:Type Ellipse}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Height" Value="8"/>
+            <Setter Property="Fill" Value="Blue"/>
+            <Setter Property="Stroke" Value="Black"/>
+        </Style>
+    </UserControl.Resources>
+    <Border BorderThickness="3" BorderBrush="Black">
+        <Grid x:Name="LayoutRoot" Background="White" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="140"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="110"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="0" TextWrapping="Wrap" Text="深度(m)" FontSize="21.333" HorizontalAlignment="Center" VerticalAlignment="Center" Width="36" TextAlignment="Center"/>
+            <Grid x:Name="STK_CurveGroupContainer1" Margin="0" Grid.Column="1">
+                <local:ParaTable x:Name="UC_PT" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="GD_GraphContainer" Grid.Row="1" Grid.Column="1" ClipToBounds="True">
+                <local:GridMap x:Name="UC_Gm" Height="764"/>
+                <Canvas x:Name="CA_OverLay" Background="#00000000">
+                    <Border x:Name="REC_Overlay" Background="#33000000" Height="57" Canvas.Top="116.5" BorderBrush="#FF569EFF" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=CA_OverLay}" BorderThickness="1"/>
+                </Canvas>
+
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <local:DeepPanel x:Name="UC_Dp" Height="764"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="2">
+                <Grid Height="83">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BTN_ZoomIn" Style="{StaticResource ButtonStyle1}" Tag="放大" Height="Auto" Margin="0,8,0,10" VerticalAlignment="Stretch">
+                        <Path Data="M35.7915,17.746001 C37.609345,17.746 39.083,20.432292 39.083,23.746 L39.083,30.280003 47.125,30.280003 C50.438709,30.280003 53.125,31.466448 53.125,32.930001 53.125,34.393557 50.438709,35.580004 47.125,35.580004 L39.083,35.580004 39.083,42.269001 C39.083,45.582708 37.609345,48.269001 35.7915,48.269001 33.973655,48.269001 32.5,45.582708 32.499999,42.269001 L32.499999,35.580004 24.125,35.580004 C20.811291,35.580004 18.125,34.393557 18.125,32.930001 18.125,31.466448 20.811291,30.280003 24.125,30.280003 L32.499999,30.280003 32.499999,23.746 C32.5,20.432292 33.973655,17.746 35.7915,17.746001 z M34.9585,8.499999 C33.206131,8.499999 31.44611,8.6645927 29.724335,8.9906111 28.013756,9.3145099 26.325949,9.8006339 24.706331,10.439251 23.106489,11.070071 21.558977,11.855403 20.107917,12.77836 18.680635,13.686193 17.333708,14.735614 16.108524,15.901899 14.905828,17.046777 13.809223,18.315226 12.855242,19.674324 11.918041,21.009518 11.109497,22.445365 10.458622,23.941176 9.8168068,25.416169 9.3219948,26.964394 8.9929771,28.538964 8.6664982,30.101378 8.5,31.70584&#xd;&#xa;8.5,33.301996 8.5,34.804342 8.6473064,36.313623 8.9367962,37.787813 9.2282906,39.272211 9.666563,40.734716 10.236788,42.135878 10.814257,43.554842 11.532183,44.923826 12.367487,46.208036 13.216516,47.51335 14.194218,48.742735 15.271217,49.867357 16.367264,51.011862 17.575468,52.05781 18.862185,52.982782 20.170134,53.923018 21.570013,54.74618 23.025603,55.436136 24.500505,56.135244 26.044462,56.703314 27.619904,57.130018 29.208807,57.560366&#xd;&#xa;30.84223,57.85037 32.482014,57.995012 34.126617,58.140081 35.790382,58.140081 37.434987,57.995012 39.074772,57.85037 40.708191,57.560366 42.297096,57.130018 43.87254,56.703314 45.416496,56.135244 46.891399,55.436136 48.346989,54.74618 49.746864,53.923018 51.054817,52.982782 52.341534,52.05781 53.549736,51.011862 54.645782,49.867357 55.722782,48.742735 56.700481,47.51335 57.549515,46.208036 58.384815,44.923826 59.102745,43.554842 59.680214,42.135878&#xd;&#xa;60.250439,40.734716 60.688709,39.272211 60.980206,37.787813 61.269695,36.313623 61.417,34.804342 61.417,33.301996 61.417,31.70584 61.2505,30.101378 60.924023,28.538964 60.595005,26.964394 60.100193,25.416169 59.458378,23.941176 58.807503,22.445365 57.998959,21.009518 57.061756,19.674324 56.107777,18.315226 55.011169,17.046777 53.808475,15.901899 52.583294,14.735614 51.236362,13.686193 49.809082,12.77836 48.358025,11.855403 46.810513,11.070071&#xd;&#xa;45.21067,10.439251 43.591053,9.8006339 41.903244,9.3145099 40.192665,8.9906111 38.47089,8.6645927 36.710869,8.499999 34.9585,8.499999 z M34.9585,0.5 C53.989407,0.5 69.417,15.185954 69.417,33.301996 69.417,40.378576 67.062935,46.931765 63.059589,52.290663 L62.64994,52.825335 62.654633,52.826769 C75.483452,56.971296 94.636246,73.667147 94.876091,78.500216 95.33461,87.739843 89.875671,90.75041 82.875763,89.875402 78.732353,89.357458 58.584854,72.632914 53.239185,61.399611 L53.135738,61.171373 52.826485,61.355139 C47.616463,64.368647 41.500374,66.103991 34.9585,66.103991 15.927593,66.103991 0.5,51.418039 0.5,33.301996 0.5,15.185954 15.927597,0.5 34.9585,0.5 z" Fill="Black" Height="17.8" Canvas.Left="693.667" Stretch="Fill" Stroke="Black" Canvas.Top="272.48" Width="17.4"/>
+                    </Button>
+                    <Button x:Name="BTN_Back" Tag="撤销" Style="{StaticResource ButtonStyle1}" Height="Auto" Margin="0,8,0,10" VerticalAlignment="Stretch" Grid.Column="1">
+                        <Path Data="M24.125,30.280001 L47.125,30.280001 C50.438709,30.280001 53.125,31.466446 53.125,32.93 53.125,34.393555 50.438709,35.580002 47.125,35.580002 L24.125,35.580002 C20.811291,35.580002 18.125,34.393555 18.125,32.93 18.125,31.466446 20.811291,30.280001 24.125,30.280001 z M34.9585,8.4999989 C33.206131,8.4999989 31.44611,8.6645926 29.724335,8.9906109 28.013756,9.3145092 26.325949,9.8006333 24.706331,10.439251 23.106489,11.07007 21.558977,11.855402 20.107918,12.778359 18.680635,13.686192 17.333708,14.735613 16.108524,15.901897 14.905828,17.046776 13.809223,18.315225 12.855242,19.674322 11.918041,21.009517 11.109497,22.445364 10.458622,23.941175 9.8168068,25.416168 9.3219948,26.964392 8.9929762,28.538963 8.6664982,30.101377 8.5,31.705839&#xd;&#xa;8.5,33.301994 8.5,34.80434 8.6473055,36.313621 8.9367962,37.787811 9.2282906,39.272209 9.666563,40.734714 10.236787,42.135876 10.814257,43.55484 11.532183,44.923824 12.367487,46.208034 13.216517,47.513347 14.194218,48.742733 15.271217,49.867355 16.367264,51.01186 17.575468,52.057808 18.862185,52.98278 20.170134,53.923015 21.570013,54.746177 23.025602,55.436134 24.500505,56.135242 26.044462,56.703312 27.619904,57.130016 29.208807,57.560364&#xd;&#xa;30.84223,57.850368 32.482014,57.99501 34.126617,58.140079 35.790382,58.140079 37.434986,57.99501 39.074772,57.850368 40.708191,57.560364 42.297096,57.130016 43.87254,56.703312 45.416496,56.135242 46.891399,55.436134 48.346989,54.746177 49.746864,53.923015 51.054817,52.98278 52.341534,52.057808 53.549736,51.01186 54.645782,49.867355 55.722782,48.742733 56.700481,47.513347 57.549515,46.208034 58.384815,44.923824 59.102745,43.55484 59.680214,42.135876&#xd;&#xa;60.250439,40.734714 60.688709,39.272209 60.980206,37.787811 61.269695,36.313621 61.417,34.80434 61.417,33.301994 61.417,31.705839 61.2505,30.101377 60.924023,28.538963 60.595005,26.964392 60.100193,25.416168 59.458378,23.941175 58.807503,22.445364 57.998959,21.009517 57.061756,19.674322 56.107777,18.315225 55.011169,17.046776 53.808475,15.901897 52.583294,14.735613 51.236362,13.686192 49.809082,12.778359 48.358025,11.855402 46.810513,11.07007&#xd;&#xa;45.21067,10.439251 43.591053,9.8006333 41.903244,9.3145092 40.192665,8.9906109 38.47089,8.6645926 36.710869,8.4999989 34.9585,8.4999989 z M34.9585,0.5 C53.989407,0.50000006 69.417,15.185953 69.417,33.301994 69.417,40.378574 67.062935,46.931763 63.059589,52.290661 L62.64994,52.825332 62.654633,52.826767 C75.483452,56.971294 94.636246,73.667145 94.876091,78.500213 95.33461,87.739837 89.875671,90.750404 82.875763,89.875397 78.732353,89.357452 58.584854,72.632912 53.239185,61.399608 L53.135738,61.171371 52.826485,61.355137 C47.616463,64.368645 41.500374,66.103988 34.9585,66.103988 15.927593,66.103988 0.5,51.418037 0.5,33.301994 0.5,15.185953 15.927597,0.50000006 34.9585,0.5 z" Fill="Black" Height="17.8" Canvas.Left="693.667" Stretch="Fill" Stroke="Black" Canvas.Top="315.916" Width="17.4"/>
+                    </Button>
+                    <Button x:Name="BTN_Move" Tag="平移" Style="{StaticResource ButtonStyle1}" Height="Auto" Margin="0,8,0,10" VerticalAlignment="Stretch" Grid.Row="1">
+                        <Path Data="M10.728686,9.9581111 L10.708,4.1249999 8.2079999,4.0416666 12.208,-0.62499998 16.166333,4.0833332 13.541333,4.1666666 13.583,9.9166664 19.291333,9.9583331 19.249666,7.3333331 24.124666,11.208333 19.416333,15.166666 19.333,12.625 13.56198,12.583056 13.5205,18.375 16.082778,18.4375 12.207832,23.187499 8.2078874,18.5625 10.770352,18.5 10.770352,12.624722 4.9995986,12.666388 4.9579325,15.249667 0.33299676,11.312249 4.8954334,7.3123333 4.9891821,9.9841522&#xa; z" Height="17" Canvas.Left="304.258" Stretch="Fill" StrokeThickness="0" Canvas.Top="223.654" Width="17" Fill="Black" />
+                    </Button>
+                    <Button x:Name="BTN_Delete" Tag="删除" Style="{StaticResource ButtonStyle1}" Height="Auto" Margin="0,8,0,10" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1">
+                        <Path Data="M23.616116,0 L29.616116,0 29.616116,23.96967 55,23.96967 55,29.96967 29.616116,29.96967 29.616116,55 23.616116,55 23.616116,29.96967 0,29.96967 0,23.96967 23.616116,23.96967 z" Fill="Black" Height="13.988" Canvas.Left="154.989" RenderTransformOrigin="0.5,0.490357624400746" Stretch="Fill" StrokeThickness="0" Canvas.Top="490.076" Width="13.988" >
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Button>
+                </Grid>
+                <CheckBox x:Name="CKB_ShowGrid" Content="显示网格" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"></CheckBox>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.478*"/>
+                        <ColumnDefinition Width="0.522*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="TBK_dEPTH" TextWrapping="Wrap" Text="位置：0" TextAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <Slider x:Name="SL_Main" Orientation="Vertical" Height="224" RenderTransformOrigin="0.5,0.5" Margin="0,66,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Slider.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Slider.RenderTransform>
+                    </Slider>
+                    <TextBlock x:Name="TBK_Zoom" TextWrapping="Wrap" TextAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"/>
+                    <Slider x:Name="SL_Zoom" Orientation="Vertical" Height="224" RenderTransformOrigin="0.5,0.5" Margin="0,66,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1">
+                        <Slider.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Slider.RenderTransform>
+                    </Slider>
+                </Grid>
+            </StackPanel>
+            <Line x:Name="line" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="2" Fill="Black" X2="{Binding ActualWidth, ElementName=line}" Panel.ZIndex="-5"/>
+            <Line x:Name="line1" Grid.RowSpan="2" HorizontalAlignment="Right" StrokeThickness="2" Y2="{Binding ActualHeight, ElementName=line1}" Fill="Black" Stroke="Black"/>
+            <Line x:Name="line2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Left" StrokeThickness="2" Y2="{Binding ActualHeight, ElementName=line2}" Fill="Black" Stroke="Black"/>
+            <Line x:Name="line3" StrokeThickness="2" HorizontalAlignment="Right" Grid.Column="1" Grid.RowSpan="2" Y2="{Binding ActualHeight, ElementName=line3}" Fill="Black" Stroke="Black"/>
+
+        </Grid>
+    </Border>
+</UserControl>

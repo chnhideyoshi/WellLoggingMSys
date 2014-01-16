@@ -1,0 +1,15 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="LoggingDataManager.WPFGraph.DeepPanel"
+	x:Name="UserControl"
+	d:DesignWidth="81" d:DesignHeight="480">
+
+	<Canvas x:Name="LayoutRoot" Background="White">
+		<Line x:Name="line" Height="480" Width="{Binding ActualWidth, ElementName=LayoutRoot}" Y1="24" Y2="{Binding Y1, ElementName=line}" X2="{Binding ActualWidth, ElementName=LayoutRoot}" Stroke="Black"></Line>
+		<TextBlock Canvas.Left="8" Canvas.Top="18" Background="White" Width="65" TextAlignment="Center" Height="16">1221123</TextBlock>
+	</Canvas>
+</UserControl>

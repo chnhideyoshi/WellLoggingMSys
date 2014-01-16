@@ -1,0 +1,31 @@
+#ImageJ 1.45c Preferences
+#Tue Apr 03 15:21:29 CST 2012
+menu.size=14
+fps=7.0
+new.type=0
+new.width=400
+fcolor=\#000000
+div-by-zero=Infinity
+pp.options=1
+raw.type=0
+ij.y=138
+roicolor=\#FFFF00
+ij.x=579
+noise.sd=25.0
+prefs.options=53248
+new.slices=1
+raw.width=512
+new.height=400
+new.fill=0
+bcolor=\#FFFFFF
+ap.options=64
+measurements=19
+precision=3
+mark.width=0
+raw.gap=0
+raw.height=512
+raw.options=0
+showcolor=\#00FFFF
+raw.n=1
+jpeg=75
+raw.offset=0

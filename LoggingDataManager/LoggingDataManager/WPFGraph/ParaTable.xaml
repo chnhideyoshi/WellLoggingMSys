@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="LoggingDataManager.WPFGraph.ParaTable"
+	x:Name="UserControl"
+	d:DesignWidth="213.333" Height="35">
+
+	<Border x:Name="LayoutRoot" BorderThickness="1,0" BorderBrush="Black">
+		<Grid Margin="0,0,0,0" d:LayoutOverrides="Height">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<TextBlock HorizontalAlignment="Center" FontSize="14"><Run x:Name="R_CurveName" Text="曲线名称"/> (<Run x:Name="R_CurveUnit" Text="单位"/>)</TextBlock>
+			<TextBlock x:Name="TBK_MinValue" HorizontalAlignment="Left" Grid.Row="1" Margin="8,-5,0,0"><Run Text="0"/></TextBlock>
+			<TextBlock x:Name="TBK_MaxValue" HorizontalAlignment="Right" Margin="0,-5,8,0" Grid.Row="1"><Run Text="max"/></TextBlock>
+			<Line x:Name="line4" StrokeThickness="2" X2="{Binding ActualWidth, ElementName=line4}" Stroke="Black" Grid.Row="1" VerticalAlignment="Bottom" Margin="0,0,0,2" StrokeDashArray="1 0"/>
+		</Grid>
+	</Border>
+</UserControl>
